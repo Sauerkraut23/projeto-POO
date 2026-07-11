@@ -8,17 +8,8 @@ Projeto de um jogo simples que use POO em java.
 - O tabuleiro da superfície será de 10x10
 - Os navios serão de: 1 casa(3x), 2 casas(2x), 3 casas(2x), 4 casas(2x) e 5 casas(1x)
 - Os navios terão os nomes: Corveta(1 casa), Fragata(2 casas), Contratorpedeiro(3 casas), Cruzador(4 casas) e Porta-aviões(5 casas)
-- O usuário poderá decidir atacar o tabuleiro da superfície ou o tabuleiro dos submarinos
-- O tabuleiro dos submarinos será de 8x8
-- Os submarinos serão de: 1 casa(2x) 2 casas(2x) e 3 casas(2x)
-- Os submarinos terão os nomes: SSK(1 casa), SSGN(2 casas) e SSBN(3 casas)
-- O porta-aviões terá o poder de atacar 5 casas de uma vez
+- O porta-aviões terá o poder de atacar em forma de cruz (5 casas) de uma vez
 - O cruzador poderá atacar uma área de 3x3 casas de uma vez
 - O contratorpedeiro poderá atacar uma linha de 7 casas de uma vez
 - A fragata poderá revelar uma área de 2x2 casas, porém não pode atacar
 - A corveta terá o ataque normal, porém pode se mover duas casas por turno
-- Os submarinos são livres para se mover o quanto quiserem pelo tabuleiro dos submarinos
-- O submarino SSK pode atacar uma área de 4 casas em linha
-- O submarino SSGN pode implantar minas submarinas que causarão um ataque em linha de 2 casa para frente e para trás ou para a esquerda e para direita
-- O submarino SSBN pode revelar toda a área inimiga ou atacar uma área de 3x3
-- Submarinos e navios não podem se atacar
