@@ -3,7 +3,7 @@ public class Corveta extends Navio {
         super("Corveta",1);
     }
 
-    public void mover(int newX, int newY){
+    public void moverCorveta(int newX, int newY){
         setPosicao(newX, newY, getHorizontal());
     }
 

@@ -3,7 +3,7 @@ public class Fragata extends Navio{
         super("Fragata",2);
     }
 
-    public void revelarArea(Tabuleiro tabuleiroInimigo, int x, int y){
-        tabuleiroInimigo.revelarArea(x,y, 2, 2);
+    public void revelarArea(Tabuleiro tabuleiroInimigo, int centroX, int centroY){
+        tabuleiroInimigo.revelarArea(centroX,centroY, 2, 2);
     }
 }
