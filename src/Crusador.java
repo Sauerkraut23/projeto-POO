@@ -1,21 +1,18 @@
-import java.arraylist;
-import java.util.List;
+public class Cruzador extends Navio {
 
-public class Crusador extends Navio {
-
-    private boolean habilidadeUsada;
-
-    public Crusador() {
-        super("Crusador", 4);
-        this.habilidadeUsada = false;
+    public Cruzador(){
+        super("Cruzador", 4);
     }
 
-    public list<int[]> usarHabilidadeEspecial(int centroX, int centroY);
-     List<int[]> areaAtaque = new ArrayList<>();
+    public void atacar3x3(Tabuleiro tabuleiroInimigo, int centroX, int centroY){
+        for(int i = -1; i <= 1; i++){
+            for(int j = -1; j <= 1; j++){
+                int alvoX = centroX + i;
+                int alvoY = centroY + j;
 
-    for(int x = centroX -1; x <= centroX +1; x++){
-        for(int y = centroY -1; y <= centroY +1; y++){
-            areaAtaque.add(new int[]{x, y});   
+                if(tabuleiroInimigo.posicaoValida(alvoX, alvoY)){
+                    tabuleiroInimigo.receberAtaque(alvoX, alvoY);
+                }
         }
     }
 }
