@@ -1,47 +1,35 @@
-
 public abstract class Navio {
-
-    private String nome;
-    private int tamanho;
+    private int vida;
+    private String tipoNavio;
     private int partesAtingidas;
-    private int localNavioEixoX;
-    private int localNavioEixoY;
     private boolean afundado;
-    private boolean horizontal;
 
-    public Navio(String nome, int tamanho) {
-        this.nome = nome;
-        this.tamanho = tamanho;
+    public Navio(String tipoNavio, int vida) {
+        this.tipoNavio = tipoNavio;
+        this.vida = vida;
         this.partesAtingidas = 0;
-        this.afundado = false;
     }
 
     public void levarDano() {
-        this.partesAtingidas++;
-        if (this.partesAtingidas >= this.tamanho) {
+        this.vida--;
+        if (this.vida <= 0) {
             this.afundado = true;
         }
+    }
+
+    public int getVida() {
+        return this.vida;
+    }
+
+    public String getTipoNavio() {
+        return this.tipoNavio;
     }
 
     public boolean getAfundado() {
         return this.afundado;
     }
 
-    public int getTamanho() {
-        return this.tamanho;
+    public int partesAtingidas() {
+        return this.partesAtingidas;
     }
-
-    public String getNome() {
-        return this.nome;
-    }
-    public boolean getHorizontal(){
-        return this.horizontal;
-    }
-
-    public void setPosicao(int x, int y, boolean horizontal) {
-        this.localNavioEixoX = x;
-        this.localNavioEixoY = y;
-        this.horizontal = horizontal;
-    }
-
 }
