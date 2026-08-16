@@ -4,7 +4,7 @@ public class Tabuleiro {
 
     private String[][] tabuleiro = new String[8][8];
     private Navio[][] navioNoTabuleiro = new Navio[8][8];
-    private Navio frota[] = new Navio[2];
+    private Navio frota[] = new Navio[9];
 
     public void iniciarTabuleiro() {
         for (int i = 0; i < 8; i++) {
@@ -68,15 +68,15 @@ public class Tabuleiro {
 
         frota[0] = new Fragata();
         frota[1] = new Fragata();
-        // frota[2] = new Fragata();
-        // frota[3] = new Fragata();
-        // frota[4] = new Contratorpedeiro();
-        // frota[5] = new Contratorpedeiro();
-        // frota[6] = new Cruzador();
-        // frota[7] = new PortaAviao();
-        // frota[8] = new PortaAviao();
+        frota[2] = new Fragata();
+        frota[3] = new Fragata();
+        frota[4] = new Contratorpedeiro();
+        frota[5] = new Contratorpedeiro();
+        frota[6] = new Cruzador();
+        frota[7] = new PortaAviao();
+        frota[8] = new PortaAviao();
         boolean horizontal = false;
-        while (contagemNavios < 2) {
+        while (contagemNavios < 9) {
             System.out.println("Posicione o navio: " + frota[contagemNavios].getTipoNavio() + " numero: "
                     + (contagemNavios + 1) + "\nPosicao X: ");
             int posicaoX = ler.nextInt();
@@ -105,8 +105,9 @@ public class Tabuleiro {
             }
 
             exibirTabuleiro();
-            ler.close();
+
         }
+
     }
 
     public boolean receberTiro(int posicaoTiroY, int posicaoTiroX) {
@@ -151,4 +152,5 @@ public class Tabuleiro {
         }
         return naviosAfundados == frota.length;
     }
+
 }
